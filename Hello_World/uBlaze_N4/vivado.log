@@ -1,0 +1,641 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Sat Oct 13 20:11:26 2018
+# Process ID: 17692
+# Current directory: C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16932 C:\Users\Jerome\Desktop\Programming_Learning\FPGA\SoC\Projects\uBlaze_N4\Hello_World\uBlaze_N4\uBlaze_N4.xpr
+# Log file: C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/vivado.log
+# Journal file: C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4'
+INFO: [Project 1-313] Project file moved from 'C:/Users/Jerome/Desktop/Programming Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:11 . Memory (MB): peak = 883.961 ; gain = 143.117
+update_compile_order -fileset sources_1
+launch_sdk -workspace C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.sdk -hwspec C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.sdk/uBlaze_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.sdk -hwspec C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.sdk/uBlaze_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_bd_design {C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.srcs/sources_1/bd/uBlaze/uBlaze.bd}
+Adding cell -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding cell -- xilinx.com:ip:microblaze:10.0 - microblaze_0
+Adding cell -- xilinx.com:ip:mdm:3.2 - mdm_1
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_wiz_0_100M
+Adding cell -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0
+Adding cell -- xilinx.com:ip:lmb_v10:3.0 - dlmb_v10
+Adding cell -- xilinx.com:ip:lmb_v10:3.0 - ilmb_v10
+Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - dlmb_bram_if_cntlr
+Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - ilmb_bram_if_cntlr
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.4 - lmb_bram
+Successfully read diagram <uBlaze> from BD file <C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.srcs/sources_1/bd/uBlaze/uBlaze.bd>
+open_bd_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1011.145 ; gain = 107.328
+startgroup
+set_property -dict [list CONFIG.RESET_BOARD_INTERFACE {reset} CONFIG.C_EXT_RESET_HIGH {0}] [get_bd_cells rst_clk_wiz_0_100M]
+CRITICAL WARNING: [BD 41-737] Cannot set the parameter C_EXT_RESET_HIGH on /rst_clk_wiz_0_100M. It is read-only.
+endgroup
+regenerate_bd_layout
+validate_bd_design
+save_bd_design
+Wrote  : <C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.srcs/sources_1/bd/uBlaze/uBlaze.bd> 
+reset_run synth_1
+reset_run uBlaze_rst_clk_wiz_0_100M_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [BD 41-1662] The design 'uBlaze.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.srcs/sources_1/bd/uBlaze/synth/uBlaze.vhd
+VHDL Output written to : C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.srcs/sources_1/bd/uBlaze/sim/uBlaze.vhd
+VHDL Output written to : C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.srcs/sources_1/bd/uBlaze/hdl/uBlaze_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mdm_1 .
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uartlite_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
+Exporting to file C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.srcs/sources_1/bd/uBlaze/hw_handoff/uBlaze.hwh
+Generated Block Design Tcl file C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.srcs/sources_1/bd/uBlaze/hw_handoff/uBlaze_bd.tcl
+Generated Hardware Definition File C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.srcs/sources_1/bd/uBlaze/synth/uBlaze.hwdef
+[Sat Oct 13 20:26:59 2018] Launched uBlaze_rst_clk_wiz_0_100M_0_synth_1, synth_1...
+Run output will be captured here:
+uBlaze_rst_clk_wiz_0_100M_0_synth_1: C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.runs/uBlaze_rst_clk_wiz_0_100M_0_synth_1/runme.log
+synth_1: C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.runs/synth_1/runme.log
+[Sat Oct 13 20:26:59 2018] Launched impl_1...
+Run output will be captured here: C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1147.500 ; gain = 101.523
+file copy -force C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.runs/impl_1/uBlaze_wrapper.sysdef C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.sdk/uBlaze_wrapper.hdf
+
+launch_sdk -workspace C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.sdk -hwspec C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.sdk/uBlaze_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.sdk -hwspec C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.sdk/uBlaze_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+startgroup
+set_property -dict [list CONFIG.RESET_TYPE {ACTIVE_LOW} CONFIG.RESET_PORT {resetn}] [get_bd_cells clk_wiz_0]
+WARNING: [BD 41-1684] Pin /clk_wiz_0/reset is now disabled. All connections to this pin have been removed. 
+endgroup
+set_property -dict [list CONFIG.POLARITY {ACTIVE_LOW}] [get_bd_ports reset]
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/resetn'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/resetn'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/resetn'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/resetn'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/resetn'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/resetn'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/resetn'
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {Auto}}  [get_bd_pins clk_wiz_0/resetn]
+INFO: [board_rule 100-100] set_property CONFIG.RESET_BOARD_INTERFACE reset [get_bd_cells /clk_wiz_0]
+INFO: [board_rule 100-100] connect_bd_net /reset /clk_wiz_0/resetn
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY ACTIVE_LOW /reset
+save_bd_design
+Wrote  : <C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.srcs/sources_1/bd/uBlaze/uBlaze.bd> 
+validate_bd_design
+save_bd_design
+Wrote  : <C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.srcs/sources_1/bd/uBlaze/uBlaze.bd> 
+reset_run synth_1
+reset_run uBlaze_rst_clk_wiz_0_100M_0_synth_1
+reset_run uBlaze_clk_wiz_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [BD 41-1662] The design 'uBlaze.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.srcs/sources_1/bd/uBlaze/synth/uBlaze.vhd
+VHDL Output written to : C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.srcs/sources_1/bd/uBlaze/sim/uBlaze.vhd
+VHDL Output written to : C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.srcs/sources_1/bd/uBlaze/hdl/uBlaze_wrapper.vhd
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mdm_1 .
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uartlite_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
+Exporting to file C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.srcs/sources_1/bd/uBlaze/hw_handoff/uBlaze.hwh
+Generated Block Design Tcl file C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.srcs/sources_1/bd/uBlaze/hw_handoff/uBlaze_bd.tcl
+Generated Hardware Definition File C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.srcs/sources_1/bd/uBlaze/synth/uBlaze.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP uBlaze_rst_clk_wiz_0_100M_0, cache-ID = d954f42ddda53584; cache size = 8.349 MB.
+[Sat Oct 13 20:42:20 2018] Launched uBlaze_clk_wiz_0_0_synth_1, synth_1...
+Run output will be captured here:
+uBlaze_clk_wiz_0_0_synth_1: C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.runs/uBlaze_clk_wiz_0_0_synth_1/runme.log
+synth_1: C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.runs/synth_1/runme.log
+[Sat Oct 13 20:42:20 2018] Launched impl_1...
+Run output will be captured here: C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1352.766 ; gain = 41.969
+file copy -force C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.runs/impl_1/uBlaze_wrapper.sysdef C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.sdk/uBlaze_wrapper.hdf
+
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+close_project
+create_project project_1 C:/Users/Jerome/Desktop/test/project_1 -part xc7a100tcsg324-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
+set_property target_language VHDL [current_project]
+create_bd_design "design_1"
+Wrote  : <C:/Users/Jerome/Desktop/test/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd> 
+create_bd_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1409.004 ; gain = 0.000
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0
+apply_board_connection -board_interface "reset" -ip_intf "proc_sys_reset_0/ext_reset" -diagram "design_1" 
+INFO: [board_interface 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells -quiet /proc_sys_reset_0]
+INFO: [board_interface 100-100] set_property CONFIG.RESET_BOARD_INTERFACE reset [get_bd_cells -quiet /proc_sys_reset_0]
+INFO: [board_interface 100-100] create_bd_port -dir I reset -type rst
+INFO: [board_interface 100-100] set_property CONFIG.POLARITY  /reset
+INFO: [board_interface 100-100] connect_bd_net /reset /proc_sys_reset_0/ext_reset_in
+INFO: [board_interface 100-100] set_property CONFIG.POLARITY ACTIVE_LOW /reset
+endgroup
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'apply_board_connection -board_interface "reset" -ip_intf "proc_sys_reset_0/ext_reset" -diagram "design_1" '
+INFO: [Common 17-17] undo 'create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0'
+INFO: [Common 17-17] undo 'startgroup'
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0
+apply_board_connection -board_interface "sys_clock" -ip_intf "clk_wiz_0/clock_CLK_IN1" -diagram "design_1" 
+INFO: [board_interface 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells -quiet /clk_wiz_0]
+INFO: [board_interface 100-100] set_property CONFIG.CLK_IN1_BOARD_INTERFACE sys_clock [get_bd_cells -quiet /clk_wiz_0]
+INFO: [board_interface 100-100] create_bd_port -dir I sys_clock -type clk
+INFO: [board_interface 100-100] set_property CONFIG.FREQ_HZ 100000000 /sys_clock
+INFO: [board_interface 100-100] set_property CONFIG.PHASE 0.000 /sys_clock
+INFO: [board_interface 100-100] connect_bd_net /sys_clock /clk_wiz_0/clk_in1
+INFO: [board_interface 100-100] set_property CONFIG.FREQ_HZ 100000000 /sys_clock
+endgroup
+apply_board_connection -board_interface "reset" -ip_intf "clk_wiz_0/reset" -diagram "design_1" 
+INFO: [board_interface 100-100] set_property CONFIG.RESET_BOARD_INTERFACE reset [get_bd_cells -quiet /clk_wiz_0]
+INFO: [board_interface 100-100] create_bd_port -dir I reset -type rst
+INFO: [board_interface 100-100] set_property CONFIG.POLARITY  /reset
+INFO: [board_interface 100-100] connect_bd_net /reset /clk_wiz_0/reset
+INFO: [board_interface 100-100] set_property CONFIG.POLARITY ACTIVE_LOW /reset
+startgroup
+set_property -dict [list CONFIG.RESET_TYPE {ACTIVE_LOW} CONFIG.RESET_PORT {resetn}] [get_bd_cells clk_wiz_0]
+WARNING: [BD 41-1684] Pin /clk_wiz_0/reset is now disabled. All connections to this pin have been removed. 
+delete_bd_objs [get_bd_nets reset_1]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:10.0 microblaze_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:microblaze -config { axi_intc {0} axi_periph {Enabled} cache {None} clk {/clk_wiz_0/clk_out1 (100 MHz)} debug_module {Debug Only} ecc {None} local_mem {8KB} preset {None}}  [get_bd_cells microblaze_0]
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+connect_bd_net [get_bd_ports reset] [get_bd_pins clk_wiz_0/resetn]
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_clk_wiz_0_100M/ext_reset_in'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_clk_wiz_0_100M/ext_reset_in'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_clk_wiz_0_100M/ext_reset_in'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_clk_wiz_0_100M/ext_reset_in'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_clk_wiz_0_100M/ext_reset_in'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_clk_wiz_0_100M/ext_reset_in'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_clk_wiz_0_100M/ext_reset_in'
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {Auto}}  [get_bd_pins rst_clk_wiz_0_100M/ext_reset_in]
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /rst_clk_wiz_0_100M]
+INFO: [board_rule 100-100] set_property CONFIG.RESET_BOARD_INTERFACE reset [get_bd_cells /rst_clk_wiz_0_100M]
+INFO: [board_rule 100-100] connect_bd_net /reset /rst_clk_wiz_0_100M/ext_reset_in
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY ACTIVE_LOW /reset
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0
+apply_board_connection -board_interface "usb_uart" -ip_intf "axi_uartlite_0/UART" -diagram "design_1" 
+INFO: [board_interface 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells -quiet /axi_uartlite_0]
+INFO: [board_interface 100-100] set_property CONFIG.UARTLITE_BOARD_INTERFACE usb_uart [get_bd_cells -quiet /axi_uartlite_0]
+INFO: [board_interface 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:uart_rtl:1.0 usb_uart
+INFO: [board_interface 100-100] connect_bd_intf_net /usb_uart /axi_uartlite_0/UART
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/microblaze_0 (Periph)} Slave {/axi_uartlite_0/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_uartlite_0/S_AXI]
+</axi_uartlite_0/S_AXI/Reg> is being mapped into </microblaze_0/Data> at <0x40600000 [ 64K ]>
+regenerate_bd_layout
+validate_bd_design
+make_wrapper -files [get_files C:/Users/Jerome/Desktop/test/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd] -top
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:/Users/Jerome/Desktop/test/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <C:/Users/Jerome/Desktop/test/project_1/project_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+VHDL Output written to : C:/Users/Jerome/Desktop/test/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/Users/Jerome/Desktop/test/project_1/project_1.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/Users/Jerome/Desktop/test/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+add_files -norecurse C:/Users/Jerome/Desktop/test/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : C:/Users/Jerome/Desktop/test/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/Users/Jerome/Desktop/test/project_1/project_1.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/Users/Jerome/Desktop/test/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mdm_1 .
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_0_100M .
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uartlite_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
+Exporting to file C:/Users/Jerome/Desktop/test/project_1/project_1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/Jerome/Desktop/test/project_1/project_1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/Jerome/Desktop/test/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Sat Oct 13 20:53:44 2018] Launched design_1_clk_wiz_0_0_synth_1, design_1_rst_clk_wiz_0_100M_0_synth_1, design_1_axi_uartlite_0_0_synth_1, design_1_microblaze_0_0_synth_1, design_1_mdm_1_0_synth_1, design_1_ilmb_bram_if_cntlr_0_synth_1, design_1_dlmb_bram_if_cntlr_0_synth_1, design_1_lmb_bram_0_synth_1, design_1_dlmb_v10_0_synth_1, design_1_ilmb_v10_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_clk_wiz_0_0_synth_1: C:/Users/Jerome/Desktop/test/project_1/project_1.runs/design_1_clk_wiz_0_0_synth_1/runme.log
+design_1_rst_clk_wiz_0_100M_0_synth_1: C:/Users/Jerome/Desktop/test/project_1/project_1.runs/design_1_rst_clk_wiz_0_100M_0_synth_1/runme.log
+design_1_axi_uartlite_0_0_synth_1: C:/Users/Jerome/Desktop/test/project_1/project_1.runs/design_1_axi_uartlite_0_0_synth_1/runme.log
+design_1_microblaze_0_0_synth_1: C:/Users/Jerome/Desktop/test/project_1/project_1.runs/design_1_microblaze_0_0_synth_1/runme.log
+design_1_mdm_1_0_synth_1: C:/Users/Jerome/Desktop/test/project_1/project_1.runs/design_1_mdm_1_0_synth_1/runme.log
+design_1_ilmb_bram_if_cntlr_0_synth_1: C:/Users/Jerome/Desktop/test/project_1/project_1.runs/design_1_ilmb_bram_if_cntlr_0_synth_1/runme.log
+design_1_dlmb_bram_if_cntlr_0_synth_1: C:/Users/Jerome/Desktop/test/project_1/project_1.runs/design_1_dlmb_bram_if_cntlr_0_synth_1/runme.log
+design_1_lmb_bram_0_synth_1: C:/Users/Jerome/Desktop/test/project_1/project_1.runs/design_1_lmb_bram_0_synth_1/runme.log
+design_1_dlmb_v10_0_synth_1: C:/Users/Jerome/Desktop/test/project_1/project_1.runs/design_1_dlmb_v10_0_synth_1/runme.log
+design_1_ilmb_v10_0_synth_1: C:/Users/Jerome/Desktop/test/project_1/project_1.runs/design_1_ilmb_v10_0_synth_1/runme.log
+synth_1: C:/Users/Jerome/Desktop/test/project_1/project_1.runs/synth_1/runme.log
+[Sat Oct 13 20:53:45 2018] Launched impl_1...
+Run output will be captured here: C:/Users/Jerome/Desktop/test/project_1/project_1.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 1586.191 ; gain = 63.984
+file mkdir C:/Users/Jerome/Desktop/test/project_1/project_1.sdk
+file copy -force C:/Users/Jerome/Desktop/test/project_1/project_1.runs/impl_1/design_1_wrapper.sysdef C:/Users/Jerome/Desktop/test/project_1/project_1.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/Users/Jerome/Desktop/test/project_1/project_1.sdk -hwspec C:/Users/Jerome/Desktop/test/project_1/project_1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/Jerome/Desktop/test/project_1/project_1.sdk -hwspec C:/Users/Jerome/Desktop/test/project_1/project_1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+close_project
+create_project project_2 {C:/Users/Jerome/Desktop/test/test this/project_2} -part xc7a100tcsg324-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
+set_property target_language VHDL [current_project]
+create_bd_design "design_1"
+Wrote  : <C:/Users/Jerome/Desktop/test/test this/project_2/project_2.srcs/sources_1/bd/design_1/design_1.bd> 
+create_bd_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1722.625 ; gain = 0.000
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:10.0 microblaze_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:microblaze -config { axi_intc {0} axi_periph {Enabled} cache {None} clk {New Clocking Wizard (100 MHz)} debug_module {Debug Only} ecc {None} local_mem {8KB} preset {None}}  [get_bd_cells microblaze_0]
+WARNING: [BD 5-235] No pins matched 'get_bd_pins /clk_wiz_1/CLK_IN1_D'
+WARNING: [BD 5-235] No pins matched 'get_bd_pins /clk_wiz_1/CLK_IN1_D'
+WARNING: [BD 5-235] No pins matched 'get_bd_pins /clk_wiz_1/CLK_IN1_D'
+WARNING: [BD 5-235] No pins matched 'get_bd_pins /clk_wiz_1/CLK_IN1_D'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_1/reset'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_1/reset'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_1/reset'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_1/reset'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_1/reset'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_1/reset'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_1/reset'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_clk_wiz_1_100M/ext_reset_in'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_clk_wiz_1_100M/ext_reset_in'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_clk_wiz_1_100M/ext_reset_in'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_clk_wiz_1_100M/ext_reset_in'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_clk_wiz_1_100M/ext_reset_in'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_clk_wiz_1_100M/ext_reset_in'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_clk_wiz_1_100M/ext_reset_in'
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_intf_pins clk_wiz_1/CLK_IN1_D]
+INFO: [board_rule 100-100] create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_clock_rtl:1.0 diff_clock_rtl
+INFO: [board_rule 100-100] set_property CONFIG.FREQ_HZ 100000000 /diff_clock_rtl
+INFO: [board_rule 100-100] connect_bd_intf_net /diff_clock_rtl /clk_wiz_1/CLK_IN1_D
+WARNING: [board_rule 100-100] Board automation did not generate location constraint for /clk_wiz_1/CLK_IN1_D. Users may need to specify the location constraint manually.
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {Auto}}  [get_bd_pins clk_wiz_1/reset]
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /clk_wiz_1]
+INFO: [board_rule 100-100] set_property CONFIG.RESET_BOARD_INTERFACE reset [get_bd_cells /clk_wiz_1]
+INFO: [board_rule 100-100] create_bd_port -dir I reset -type rst
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY  /reset
+INFO: [board_rule 100-100] connect_bd_net /reset /clk_wiz_1/reset
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY ACTIVE_LOW /reset
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {New External Port (ACTIVE_LOW)}}  [get_bd_pins rst_clk_wiz_1_100M/ext_reset_in]
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /rst_clk_wiz_1_100M]
+INFO: [board_rule 100-100] set_property CONFIG.RESET_BOARD_INTERFACE reset [get_bd_cells /rst_clk_wiz_1_100M]
+INFO: [board_rule 100-100] connect_bd_net /reset /rst_clk_wiz_1_100M/ext_reset_in
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY ACTIVE_LOW /reset
+endgroup
+validate_bd_design
+ERROR: [BD 41-238] Port/Pin property POLARITY does not match between /clk_wiz_1/reset(ACTIVE_HIGH) and /reset(ACTIVE_LOW)
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+startgroup
+set_property -dict [list CONFIG.RESET_TYPE {ACTIVE_LOW} CONFIG.RESET_PORT {resetn}] [get_bd_cells clk_wiz_1]
+WARNING: [BD 41-1684] Pin /clk_wiz_1/reset is now disabled. All connections to this pin have been removed. 
+endgroup
+validate_bd_design
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_1/resetn'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_1/resetn'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_1/resetn'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_1/resetn'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_1/resetn'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_1/resetn'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_1/resetn'
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {Auto}}  [get_bd_pins clk_wiz_1/resetn]
+INFO: [board_rule 100-100] set_property CONFIG.RESET_BOARD_INTERFACE reset [get_bd_cells /clk_wiz_1]
+INFO: [board_rule 100-100] connect_bd_net /reset /clk_wiz_1/resetn
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY ACTIVE_LOW /reset
+validate_bd_design
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0
+endgroup
+WARNING: [BD 5-235] No pins matched 'get_bd_pins /axi_uartlite_0/UART'
+WARNING: [BD 5-235] No pins matched 'get_bd_pins /axi_uartlite_0/UART'
+WARNING: [BD 5-235] No pins matched 'get_bd_pins /axi_uartlite_0/UART'
+WARNING: [BD 5-235] No pins matched 'get_bd_pins /axi_uartlite_0/UART'
+WARNING: [BD 5-235] No pins matched 'get_bd_pins /axi_uartlite_0/UART'
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_1/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/microblaze_0 (Periph)} Slave {/axi_uartlite_0/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_uartlite_0/S_AXI]
+</axi_uartlite_0/S_AXI/Reg> is being mapped into </microblaze_0/Data> at <0x40600000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {usb_uart ( USB UART ) } Manual_Source {Auto}}  [get_bd_intf_pins axi_uartlite_0/UART]
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /axi_uartlite_0]
+INFO: [board_rule 100-100] set_property CONFIG.UARTLITE_BOARD_INTERFACE usb_uart [get_bd_cells /axi_uartlite_0]
+INFO: [board_rule 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:uart_rtl:1.0 usb_uart
+INFO: [board_rule 100-100] connect_bd_intf_net /usb_uart /axi_uartlite_0/UART
+endgroup
+regenerate_bd_layout
+validate_bd_design
+save_bd_design
+Wrote  : <C:/Users/Jerome/Desktop/test/test this/project_2/project_2.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <C:/Users/Jerome/Desktop/test/test this/project_2/project_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : C:/Users/Jerome/Desktop/test/test this/project_2/project_2.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/Users/Jerome/Desktop/test/test this/project_2/project_2.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/Users/Jerome/Desktop/test/test this/project_2/project_2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mdm_1 .
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_1 .
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_1_100M .
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uartlite_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
+Exporting to file C:/Users/Jerome/Desktop/test/test this/project_2/project_2.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/Jerome/Desktop/test/test this/project_2/project_2.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/Jerome/Desktop/test/test this/project_2/project_2.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+CRITICAL WARNING: [filemgmt 20-730] Could not find a top module in the fileset sources_1.
+Resolution: With the gui up, review the source files in the Sources window. Use Add Sources to add any needed sources. If the files are disabled, enable them. You can also select the file and choose Set Used In from the pop-up menu. Review if they are being used at the proper points of the flow.
+ERROR: [Common 17-70] Application Exception: Top module not set for fileset 'sources_1'. Please ensure that a valid value is provided for 'top'. The value for 'top' can be set/changed using the 'Top Module Name' field under 'Project Settings', or using the 'set_property top' Tcl command (e.g. set_property top <name> [current_fileset]).
+make_wrapper -files [get_files {{C:/Users/Jerome/Desktop/test/test this/project_2/project_2.srcs/sources_1/bd/design_1/design_1.bd}}] -top
+add_files -norecurse {{C:/Users/Jerome/Desktop/test/test this/project_2/project_2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd}}
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sat Oct 13 21:06:48 2018] Launched design_1_dlmb_bram_if_cntlr_0_synth_1, design_1_dlmb_v10_0_synth_1, design_1_ilmb_v10_0_synth_1, design_1_clk_wiz_1_0_synth_1, design_1_mdm_1_0_synth_1, design_1_rst_clk_wiz_1_100M_0_synth_1, design_1_lmb_bram_0_synth_1, design_1_ilmb_bram_if_cntlr_0_synth_1, design_1_microblaze_0_0_synth_1, design_1_axi_uartlite_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_dlmb_bram_if_cntlr_0_synth_1: C:/Users/Jerome/Desktop/test/test this/project_2/project_2.runs/design_1_dlmb_bram_if_cntlr_0_synth_1/runme.log
+design_1_dlmb_v10_0_synth_1: C:/Users/Jerome/Desktop/test/test this/project_2/project_2.runs/design_1_dlmb_v10_0_synth_1/runme.log
+design_1_ilmb_v10_0_synth_1: C:/Users/Jerome/Desktop/test/test this/project_2/project_2.runs/design_1_ilmb_v10_0_synth_1/runme.log
+design_1_clk_wiz_1_0_synth_1: C:/Users/Jerome/Desktop/test/test this/project_2/project_2.runs/design_1_clk_wiz_1_0_synth_1/runme.log
+design_1_mdm_1_0_synth_1: C:/Users/Jerome/Desktop/test/test this/project_2/project_2.runs/design_1_mdm_1_0_synth_1/runme.log
+design_1_rst_clk_wiz_1_100M_0_synth_1: C:/Users/Jerome/Desktop/test/test this/project_2/project_2.runs/design_1_rst_clk_wiz_1_100M_0_synth_1/runme.log
+design_1_lmb_bram_0_synth_1: C:/Users/Jerome/Desktop/test/test this/project_2/project_2.runs/design_1_lmb_bram_0_synth_1/runme.log
+design_1_ilmb_bram_if_cntlr_0_synth_1: C:/Users/Jerome/Desktop/test/test this/project_2/project_2.runs/design_1_ilmb_bram_if_cntlr_0_synth_1/runme.log
+design_1_microblaze_0_0_synth_1: C:/Users/Jerome/Desktop/test/test this/project_2/project_2.runs/design_1_microblaze_0_0_synth_1/runme.log
+design_1_axi_uartlite_0_0_synth_1: C:/Users/Jerome/Desktop/test/test this/project_2/project_2.runs/design_1_axi_uartlite_0_0_synth_1/runme.log
+synth_1: C:/Users/Jerome/Desktop/test/test this/project_2/project_2.runs/synth_1/runme.log
+[Sat Oct 13 21:06:49 2018] Launched impl_1...
+Run output will be captured here: C:/Users/Jerome/Desktop/test/test this/project_2/project_2.runs/impl_1/runme.log
+delete_bd_objs [get_bd_intf_nets diff_clock_rtl_1] [get_bd_nets clk_wiz_1_locked] [get_bd_cells clk_wiz_1]
+delete_bd_objs [get_bd_intf_ports diff_clock_rtl]
+delete_bd_objs [get_bd_nets reset_1] [get_bd_ports reset]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0
+endgroup
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_clk_wiz_1_100M/ext_reset_in'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_clk_wiz_1_100M/ext_reset_in'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_clk_wiz_1_100M/ext_reset_in'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_clk_wiz_1_100M/ext_reset_in'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_clk_wiz_1_100M/ext_reset_in'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_clk_wiz_1_100M/ext_reset_in'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_clk_wiz_1_100M/ext_reset_in'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/reset'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/reset'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/reset'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/reset'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/reset'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/reset'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/reset'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/clk_in1'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/clk_in1'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/clk_in1'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/clk_in1'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/clk_in1'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/clk_in1'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/clk_in1'
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/clk_wiz_0/clk_out1 (100 MHz)" }  [get_bd_pins microblaze_0/Clk]
+INFO: [BD 5-455] Automation on '/rst_clk_wiz_1_100M/slowest_sync_clk' will not be run, since it is obsolete due to previously run automations
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {New External Port (ACTIVE_LOW)}}  [get_bd_pins rst_clk_wiz_1_100M/ext_reset_in]
+INFO: [board_rule 100-100] set_property CONFIG.RESET_BOARD_INTERFACE reset [get_bd_cells /rst_clk_wiz_1_100M]
+INFO: [board_rule 100-100] create_bd_port -dir I reset -type rst
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY  /reset
+INFO: [board_rule 100-100] connect_bd_net /reset /rst_clk_wiz_1_100M/ext_reset_in
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY ACTIVE_LOW /reset
+INFO: [BD 5-455] Automation on '/axi_uartlite_0/s_axi_aclk' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-455] Automation on '/microblaze_0_axi_periph/ACLK' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-455] Automation on '/microblaze_0_axi_periph/S00_ACLK' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-455] Automation on '/microblaze_0_axi_periph/M00_ACLK' will not be run, since it is obsolete due to previously run automations
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {Auto}}  [get_bd_pins clk_wiz_0/reset]
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /clk_wiz_0]
+INFO: [board_rule 100-100] set_property CONFIG.RESET_BOARD_INTERFACE reset [get_bd_cells /clk_wiz_0]
+INFO: [board_rule 100-100] connect_bd_net /reset /clk_wiz_0/reset
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY ACTIVE_LOW /reset
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {sys_clock ( System Clock ) } Manual_Source {Auto}}  [get_bd_pins clk_wiz_0/clk_in1]
+INFO: [board_rule 100-100] set_property CONFIG.CLK_IN1_BOARD_INTERFACE sys_clock [get_bd_cells /clk_wiz_0]
+INFO: [board_rule 100-100] create_bd_port -dir I sys_clock -type clk
+INFO: [board_rule 100-100] set_property CONFIG.FREQ_HZ 100000000 /sys_clock
+INFO: [board_rule 100-100] set_property CONFIG.PHASE 0.000 /sys_clock
+INFO: [board_rule 100-100] connect_bd_net /sys_clock /clk_wiz_0/clk_in1
+INFO: [board_rule 100-100] set_property CONFIG.FREQ_HZ 100000000 /sys_clock
+endgroup
+startgroup
+set_property -dict [list CONFIG.RESET_TYPE {ACTIVE_LOW} CONFIG.RESET_PORT {resetn}] [get_bd_cells clk_wiz_0]
+WARNING: [BD 41-1684] Pin /clk_wiz_0/reset is now disabled. All connections to this pin have been removed. 
+endgroup
+regenerate_bd_layout
+validate_bd_design
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/resetn'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/resetn'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/resetn'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/resetn'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/resetn'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/resetn'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/resetn'
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {Auto}}  [get_bd_pins clk_wiz_0/resetn]
+INFO: [board_rule 100-100] set_property CONFIG.RESET_BOARD_INTERFACE reset [get_bd_cells /clk_wiz_0]
+INFO: [board_rule 100-100] connect_bd_net /reset /clk_wiz_0/resetn
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY ACTIVE_LOW /reset
+validate_bd_design
+regenerate_bd_layout
+save_bd_design
+Wrote  : <C:/Users/Jerome/Desktop/test/test this/project_2/project_2.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <C:/Users/Jerome/Desktop/test/test this/project_2/project_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : C:/Users/Jerome/Desktop/test/test this/project_2/project_2.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/Users/Jerome/Desktop/test/test this/project_2/project_2.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/Users/Jerome/Desktop/test/test this/project_2/project_2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mdm_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_1_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uartlite_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Xilinx/Vivado/2018.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+Exporting to file C:/Users/Jerome/Desktop/test/test this/project_2/project_2.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/Jerome/Desktop/test/test this/project_2/project_2.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/Jerome/Desktop/test/test this/project_2/project_2.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Sat Oct 13 21:13:36 2018] Launched design_1_clk_wiz_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_clk_wiz_0_0_synth_1: C:/Users/Jerome/Desktop/test/test this/project_2/project_2.runs/design_1_clk_wiz_0_0_synth_1/runme.log
+synth_1: C:/Users/Jerome/Desktop/test/test this/project_2/project_2.runs/synth_1/runme.log
+[Sat Oct 13 21:13:36 2018] Launched impl_1...
+Run output will be captured here: C:/Users/Jerome/Desktop/test/test this/project_2/project_2.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1855.738 ; gain = 15.434
+file mkdir {C:/Users/Jerome/Desktop/test/test this/project_2/project_2.sdk}
+file copy -force {C:/Users/Jerome/Desktop/test/test this/project_2/project_2.runs/impl_1/design_1_wrapper.sysdef} {C:/Users/Jerome/Desktop/test/test this/project_2/project_2.sdk/design_1_wrapper.hdf}
+
+launch_sdk -workspace {C:/Users/Jerome/Desktop/test/test this/project_2/project_2.sdk} -hwspec {C:/Users/Jerome/Desktop/test/test this/project_2/project_2.sdk/design_1_wrapper.hdf}
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/Jerome/Desktop/test/test this/project_2/project_2.sdk -hwspec C:/Users/Jerome/Desktop/test/test this/project_2/project_2.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 13 21:29:10 2018...

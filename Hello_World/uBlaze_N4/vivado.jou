@@ -1,0 +1,150 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Sat Oct 13 20:11:26 2018
+# Process ID: 17692
+# Current directory: C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16932 C:\Users\Jerome\Desktop\Programming_Learning\FPGA\SoC\Projects\uBlaze_N4\Hello_World\uBlaze_N4\uBlaze_N4.xpr
+# Log file: C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/vivado.log
+# Journal file: C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.xpr
+update_compile_order -fileset sources_1
+launch_sdk -workspace C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.sdk -hwspec C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.sdk/uBlaze_wrapper.hdf
+open_bd_design {C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.srcs/sources_1/bd/uBlaze/uBlaze.bd}
+startgroup
+set_property -dict [list CONFIG.RESET_BOARD_INTERFACE {reset} CONFIG.C_EXT_RESET_HIGH {0}] [get_bd_cells rst_clk_wiz_0_100M]
+endgroup
+regenerate_bd_layout
+validate_bd_design
+save_bd_design
+reset_run synth_1
+reset_run uBlaze_rst_clk_wiz_0_100M_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+file copy -force C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.runs/impl_1/uBlaze_wrapper.sysdef C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.sdk/uBlaze_wrapper.hdf
+
+launch_sdk -workspace C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.sdk -hwspec C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.sdk/uBlaze_wrapper.hdf
+startgroup
+set_property -dict [list CONFIG.RESET_TYPE {ACTIVE_LOW} CONFIG.RESET_PORT {resetn}] [get_bd_cells clk_wiz_0]
+endgroup
+set_property -dict [list CONFIG.POLARITY {ACTIVE_LOW}] [get_bd_ports reset]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {Auto}}  [get_bd_pins clk_wiz_0/resetn]
+save_bd_design
+validate_bd_design
+save_bd_design
+reset_run synth_1
+reset_run uBlaze_rst_clk_wiz_0_100M_0_synth_1
+reset_run uBlaze_clk_wiz_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+file copy -force C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.runs/impl_1/uBlaze_wrapper.sysdef C:/Users/Jerome/Desktop/Programming_Learning/FPGA/SoC/Projects/uBlaze_N4/Hello_World/uBlaze_N4/uBlaze_N4.sdk/uBlaze_wrapper.hdf
+
+close_project
+create_project project_1 C:/Users/Jerome/Desktop/test/project_1 -part xc7a100tcsg324-1
+set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
+set_property target_language VHDL [current_project]
+create_bd_design "design_1"
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0
+apply_board_connection -board_interface "reset" -ip_intf "proc_sys_reset_0/ext_reset" -diagram "design_1" 
+endgroup
+undo
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0
+apply_board_connection -board_interface "sys_clock" -ip_intf "clk_wiz_0/clock_CLK_IN1" -diagram "design_1" 
+endgroup
+apply_board_connection -board_interface "reset" -ip_intf "clk_wiz_0/reset" -diagram "design_1" 
+startgroup
+set_property -dict [list CONFIG.RESET_TYPE {ACTIVE_LOW} CONFIG.RESET_PORT {resetn}] [get_bd_cells clk_wiz_0]
+delete_bd_objs [get_bd_nets reset_1]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:10.0 microblaze_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:microblaze -config { axi_intc {0} axi_periph {Enabled} cache {None} clk {/clk_wiz_0/clk_out1 (100 MHz)} debug_module {Debug Only} ecc {None} local_mem {8KB} preset {None}}  [get_bd_cells microblaze_0]
+connect_bd_net [get_bd_ports reset] [get_bd_pins clk_wiz_0/resetn]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {Auto}}  [get_bd_pins rst_clk_wiz_0_100M/ext_reset_in]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0
+apply_board_connection -board_interface "usb_uart" -ip_intf "axi_uartlite_0/UART" -diagram "design_1" 
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/microblaze_0 (Periph)} Slave {/axi_uartlite_0/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_uartlite_0/S_AXI]
+regenerate_bd_layout
+validate_bd_design
+make_wrapper -files [get_files C:/Users/Jerome/Desktop/test/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse C:/Users/Jerome/Desktop/test/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+file mkdir C:/Users/Jerome/Desktop/test/project_1/project_1.sdk
+file copy -force C:/Users/Jerome/Desktop/test/project_1/project_1.runs/impl_1/design_1_wrapper.sysdef C:/Users/Jerome/Desktop/test/project_1/project_1.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/Users/Jerome/Desktop/test/project_1/project_1.sdk -hwspec C:/Users/Jerome/Desktop/test/project_1/project_1.sdk/design_1_wrapper.hdf
+close_project
+create_project project_2 {C:/Users/Jerome/Desktop/test/test this/project_2} -part xc7a100tcsg324-1
+set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
+set_property target_language VHDL [current_project]
+create_bd_design "design_1"
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:10.0 microblaze_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:microblaze -config { axi_intc {0} axi_periph {Enabled} cache {None} clk {New Clocking Wizard (100 MHz)} debug_module {Debug Only} ecc {None} local_mem {8KB} preset {None}}  [get_bd_cells microblaze_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_intf_pins clk_wiz_1/CLK_IN1_D]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {Auto}}  [get_bd_pins clk_wiz_1/reset]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {New External Port (ACTIVE_LOW)}}  [get_bd_pins rst_clk_wiz_1_100M/ext_reset_in]
+endgroup
+validate_bd_design
+startgroup
+set_property -dict [list CONFIG.RESET_TYPE {ACTIVE_LOW} CONFIG.RESET_PORT {resetn}] [get_bd_cells clk_wiz_1]
+endgroup
+validate_bd_design
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {Auto}}  [get_bd_pins clk_wiz_1/resetn]
+validate_bd_design
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_1/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/microblaze_0 (Periph)} Slave {/axi_uartlite_0/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_uartlite_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {usb_uart ( USB UART ) } Manual_Source {Auto}}  [get_bd_intf_pins axi_uartlite_0/UART]
+endgroup
+regenerate_bd_layout
+validate_bd_design
+save_bd_design
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+make_wrapper -files [get_files {{C:/Users/Jerome/Desktop/test/test this/project_2/project_2.srcs/sources_1/bd/design_1/design_1.bd}}] -top
+add_files -norecurse {{C:/Users/Jerome/Desktop/test/test this/project_2/project_2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd}}
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+delete_bd_objs [get_bd_intf_nets diff_clock_rtl_1] [get_bd_nets clk_wiz_1_locked] [get_bd_cells clk_wiz_1]
+delete_bd_objs [get_bd_intf_ports diff_clock_rtl]
+delete_bd_objs [get_bd_nets reset_1] [get_bd_ports reset]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/clk_wiz_0/clk_out1 (100 MHz)" }  [get_bd_pins microblaze_0/Clk]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {New External Port (ACTIVE_LOW)}}  [get_bd_pins rst_clk_wiz_1_100M/ext_reset_in]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {Auto}}  [get_bd_pins clk_wiz_0/reset]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {sys_clock ( System Clock ) } Manual_Source {Auto}}  [get_bd_pins clk_wiz_0/clk_in1]
+endgroup
+startgroup
+set_property -dict [list CONFIG.RESET_TYPE {ACTIVE_LOW} CONFIG.RESET_PORT {resetn}] [get_bd_cells clk_wiz_0]
+endgroup
+regenerate_bd_layout
+validate_bd_design
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {Auto}}  [get_bd_pins clk_wiz_0/resetn]
+validate_bd_design
+regenerate_bd_layout
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+file mkdir {C:/Users/Jerome/Desktop/test/test this/project_2/project_2.sdk}
+file copy -force {C:/Users/Jerome/Desktop/test/test this/project_2/project_2.runs/impl_1/design_1_wrapper.sysdef} {C:/Users/Jerome/Desktop/test/test this/project_2/project_2.sdk/design_1_wrapper.hdf}
+
+launch_sdk -workspace {C:/Users/Jerome/Desktop/test/test this/project_2/project_2.sdk} -hwspec {C:/Users/Jerome/Desktop/test/test this/project_2/project_2.sdk/design_1_wrapper.hdf}
