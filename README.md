@@ -15,10 +15,11 @@ This project is about using the Nexys-4 DDR, to create a MicroBlaze SoC and comm
 1. Create a new project. As no RTL sources are not used "Do not specify sources at this time" can be checked.
    Select the FPGA board used and finish building the project.
 2. Create a new block design. Add System Clock from Board tab, then Reset to the block design. Make sure to have 
-   RESET TO ACTIVE LOW on reset pin AND clocking wizard. Add Microblaze IP and run block automation with default settings.
-   Add USB UART and run block automation. Lastly click validate design.
+   RESET TO ACTIVE LOW on reset pin AND clocking wizard. Add Microblaze IP and run block automation with default 
+   settings. Add USB UART and run block automation. Lastly click validate design.
 3. Go the the sources tab and right click the block design file under Design Sources and click create HDL wrapper,
-   letting Vivado manage wrapper and auto-update. Click generate bitstream, which will also do synthesis and implementation.
+   letting Vivado manage wrapper and auto-update. Click generate bitstream, which will also do synthesis and 
+   implementation.
 4. Once bitstream is generated, go to file->export->export hardware and make sure INCLUDE BITSTREAM is checked.
 5. File->Launch SDK
 ```
