@@ -53,9 +53,11 @@ This project is about using the Nexys-4 DDR, to create a MicroBlaze SoC and comm
 MicroBlaze held in reset: 
 Error: On the software side when running the software on the FPGA, an error message comes up saying "Error while launching program: 	   Cannot stop MicroBlaze. MicroBlaze is held in reset".
 FIX: The block design needs to be changed to have the reset as ACTIVE LOW. This is also needs to be set in the clocking wizard ip core.
+
 SDK crashing: 
 Error: SDK crashes and when relaunched the screen will show the error message: Plug-in org.eclipse.cdt.ui was unable to load class     	      org.eclipse.cdt.internal.ui.editor.CEditor.
 FIX: Open SDK from windows NOT Vivado and open it to the project .sdk folder.
+
 SDK launching internal error:
 Error: When lauching SDK from Vivado an error message will pop up saying "The folder... .metadata" is read only.
 Fix: Remove any spaces in the file names of ALL connected folders.
